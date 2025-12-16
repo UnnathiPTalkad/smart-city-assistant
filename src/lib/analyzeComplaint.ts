@@ -1,5 +1,11 @@
-import { AnalysisData } from "@/components/AnalysisResult";
 import { supabase } from "@/integrations/supabase/client";
+
+export interface AnalysisData {
+  category: string;
+  priority: string;
+  department: string;
+  summary: string;
+}
 
 export const analyzeComplaint = async (
   complaint: string,
